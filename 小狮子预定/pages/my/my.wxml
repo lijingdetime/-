@@ -1,0 +1,26 @@
+<!--pages/my/my.wxml-->
+<view class="addressContainer">
+  <picker class="Choice" bindchange="collegeChoiceTap" value="{{index}}" range="{{collegeItems}}">
+    <view class="selectContainer">
+      <view class="iconContainer">
+        <image class="icons" src="../../images/house.png"></image>
+        <view class="inner-choice-one">请选择学校和校区</view>
+      </view>
+      <view>{{collegeItems[index]}}</view>
+      <view>------------------------------------</view>
+    </view>
+  </picker>
+  <view class="Choice" bindtap="addressChoiceTap">
+    <view class="iconContainer">
+      <image class="icons" src="../../images/address.png"></image>
+      <view class="inner-choice-two">请点击进行地址信息选择</view>
+    </view>
+    <view>
+      <text>{{userName}}</text>
+      <text>{{provinceName}}</text>
+      <text></text>
+      <text>{{detailInfo}}</text>
+      <text>{{telNumber}}</text>
+    </view>
+  </view>
+</view>

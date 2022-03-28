@@ -1,0 +1,22 @@
+<!--pages/detail/detail.wxml-->
+<import src="formTp.wxml" />
+<view class="detailContainer">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <block wx:for="{{productDetail}}">
+      <template is="formTp" data="{{...item,index:thisIndex}}" />
+    </block>
+    <view class="btn-area">
+      <button formType="submit">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+  </form>
+  <view class="guanggao-text">
+    ...................................广告...................................</view>
+  <swiper indicator-dots="true" autoplay="true" interval="888" duration="88">
+    <block wx:for="{{advertisingInfo}}">
+      <swiper-item>
+        <image class="guanggao-image" src="{{item.banner_images}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

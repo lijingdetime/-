@@ -1,0 +1,15 @@
+<!--pages/up_images/up_images.wxml-->
+<view class="section">
+  <view class="section__title">图片框</view>
+  <scroll-view scroll-y style="height: 200px;">
+    <block wx:for="{{selectedImage}}">
+      <image src="{{item}}" mode="scaleToFill"></image>
+    </block>
+  </scroll-view>
+  <view class="btn-area">
+    <button size="mini" bindtap="tapUp">点击我上传图片</button>
+    <button size="mini" bindtap="tapRemove">点击我删除最后一张图片</button>
+  </view>
+</view>
+<button size="mini" bindtap="reallyUpImages_one">上传图片one</button>
+<button size="mini" bindtap="reallyUpImages_two">上传图片two</button>

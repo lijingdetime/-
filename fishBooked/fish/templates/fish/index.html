@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+</head>
+<body>
+<div class="tabs is-centered">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+<div class="columns is-multiline is-mobile">
+    <div class="column is-one-quarter">
+        <p class="panel-heading">
+            菠萝汤
+        </p>
+        {#        这里是搜索框#}
+        <div class="panel-block">
+            <p class="control has-icons-left">
+                <input class="input is-small" type="text" placeholder="search">
+                <span class="icon is-small is-left">
+                    <i class="fa fa-search"></i>
+                </span>
+            </p>
+        </div>
+        {#        这里是导航栏#}
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div>
+                <a class="navbar-item">
+                    定价区
+                </a>
+                <a class="navbar-item">
+                    拍卖区
+                </a>
+                <a class="navbar-item">
+                    赠送区
+                </a>
+                <a class="navbar-item">
+                    管理
+                </a>
+                <a class="navbar-item">
+                    发布
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="column">
+        {#        这里加载展示商品#}
+        {% if image_list %}
+            <div class="columns is-multiline is-mobile">
+            {% for image in image_list %}
+                    <div class="box">
+                        <article class="media">
+                            <div class="column media-left">
+                                <figure class="image is-128x128">
+                                    <img src="{{ image.image_select }}" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <figcaption class="title small">
+                                    {#  <a href="{{ image.image_select }}">{{ image.image_name }}</a>#}
+                                    {{ image.image_name }}
+                                </figcaption>
+                                <div class="content">
+                            <p>
+                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                            </p>
+                        </div>
+                            </div>
+{#                            <nav class="level is-mobile">#}
+{#                                    <div class="level-left">#}
+{#                                <a class="level-item">#}
+{#                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>#}
+{#                                </a>#}
+{#                                <a class="level-item">#}
+{#                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>#}
+{#                                </a>#}
+{#                                <a class="level-item">#}
+{#                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                                </nav>#}
+                        </article>
+                    </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+        {#        这里是页脚#}
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+          <a class="pagination-previous">Previous</a>
+          <a class="pagination-next">Next page</a>
+          <ul class="pagination-list">
+            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+            <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+          </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* pages/detail/detail.wxss */
+
+.Section {
+  padding: 10rpx 10rpx 10rpx 10rpx;
+  margin: 10rpx 10rpx 30rpx 10rpx;
+  box-shadow: 1rpx 1rpx 1rpx 1rpx;
+  border: 1rpx solid #dbdbdb;
+}
+
+.radio {
+  margin: 0rpx 50rpx 10rpx 10rpx;
+}
+
+.detailContainer {
+  margin: 66rpx 100rpx 333rpx 10rpx;
+}
+
+.titleClass {
+  color: #363636;
+  font-size: 39rpx;
+  font-weight: 600;
+  line-height: 1.125;
+  margin: 0rpx 0rpx 25rpx 20rpx;
+}
+
+.textClass {
+  color: #4a4a4a;
+  font-size: 35rpx;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.placeholderClass {
+  margin-bottom: 25rpx;
+  color: #363636;
+  font-size: 33rpx;
+}
+
+.arrow {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0rpx 0rpx 25rpx 20rpx;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.guanggao-image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.guanggao-text {
+  margin: 35rpx 0rpx 20rpx 0rpx;
+  color: #4a4a4a;
+  font-size: 33rpx;
+}
+

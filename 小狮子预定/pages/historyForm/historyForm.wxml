@@ -1,0 +1,11 @@
+<!--pages/historyForm/historyForm.wxml-->
+<view class="Ccontainer"></view>
+<block wx:for="{{orderInformation}}">
+  <view class="historyContainer">
+    <view class="historyHead">
+      <view class="dateTime">{{item.create_time}}</view>
+      <view class="productName">{{item.product.title}}</view>
+    </view>
+    <view class="orderName">{{item.sumInfo}}</view>
+  </view>
+</block>

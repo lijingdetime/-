@@ -1,0 +1,35 @@
+/* pages/my/my.wxss */
+.addressContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 10rpx 500rpx 10rpx;
+}
+.Choice{
+  background-color: beige;
+  height: 180rpx;
+  width: 600rpx;
+  padding: 10rpx 10rpx 10rpx 30rpx;
+  margin: 20rpx 20rpx 10rpx 10rpx;
+  box-shadow:1rpx 1rpx 1rpx 1rpx;
+}
+.showText{
+  margin-left: 160rpx;
+}
+/* .inner-choice-one{
+  width:200rpx;
+} */
+
+/* .inner-choice-two{
+  background-color: #FF9F33;
+  width:420rpx;
+} */
+
+.icons {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0rpx 15rpx 25rpx 5rpx;
+}
+.iconContainer{
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,55 @@
+<template name="formTp">
+  <block wx:if="{{text_selected}}">
+    <view class="Section">
+      <view class="placeholderClass">#{{placeholder}}</view>
+      <input name="submit{{order}}" type="text" placeholder="#" />
+    </view>
+  </block>
+  <block wx:if="{{textarea_selected}}">
+    <view class="Section">
+      <view class="placeholderClass">#{{placeholder}}</view>
+      <view class="placeholderClass">
+      - - - - - - - - - - - - - - - - - - - - - - - - - 
+      </view>
+      <textarea class="placeholderClass" name="submit{{order}}" placeholder=">>>" />
+    </view>
+  </block>
+  <block wx:if="{{picker_selected}}">
+    <view class="Section">
+      <picker name="submit{{order}}" bindchange="bindPickerChange" value="{{prompt[index]}}" range="{{prompt}}">
+        <view class="picker">
+          <text class="placeholderClass">#{{placeholder}}</text>
+          <view>：{{prompt[index]}}</view>
+        </view>
+      </picker>
+    </view>
+  </block>
+  <block wx:if="{{radio_selected}}">
+    <radio-group name="submit{{order}}" class="Section" bindchange="radioChange">
+      <view class="placeholderClass">#{{placeholder}}</view>
+      <label class="radio" wx:for="{{prompt}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </block>
+  <block wx:if="{{checkbox_selected}}">
+    <checkbox-group name="submit{{order}}" class="Section" bindchange="checkboxChange">
+      <view class="placeholderClass">#{{placeholder}}</view>
+      <label class="checkbox" wx:for="{{prompt}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </checkbox-group>
+  </block>
+  <block wx:if="{{showPicture_selected}}">
+    <image style="width:100%;" mode="aspectFit" src="{{image.image_select}}" />
+  </block>
+  <block wx:if="{{showTitle_selected}}">
+    <view class="titleContainer">
+      <image class="arrow" src='../../images/arrow.png'></image>
+      <view class="titleClass">{{placeholder}}</view>
+    </view>
+  </block>
+  <block wx:if="{{showText_selected}}">
+    <view class="placeholderClass">'''{{placeholder}}'''</view>
+  </block>
+</template>

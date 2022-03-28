@@ -1,0 +1,40 @@
+<!--pages/home/home.wxml-->
+<view class="homeContainer">
+  <view class="much-left">
+    <scroll-view class="swiper-class" scroll-y>
+      <block wx:for="{{product_two}}">
+        <view class="little-swiper" bindtap="productTap" data-productId="{{item.id}}" data-barTitle="{{item.title}}">
+          <image class="swiper-image-class" src="{{item.headImage.image_select}}" />
+          <view class="swiper-title">{{item.title}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view class="swiper-class" scroll-y>
+      <block wx:for="{{product_three}}">
+        <view class="little-swiper" bindtap="productTap" data-productId="{{item.id}}" data-barTitle="{{item.title}}">
+          <image class="swiper-image-class" src="{{item.headImage.image_select}}" />
+          <view class="swiper-title">{{item.title}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view class="swiper-class" scroll-y>
+      <block wx:for="{{product_four}}">
+        <view class="little-swiper" bindtap="productTap" data-productId="{{item.id}}" data-barTitle="{{item.title}}">
+          <image class="swiper-image-class" src="{{item.headImage.image_select}}" />
+          <view class="swiper-title ">{{item.title}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- </view> -->
+  <view class="product-big-container">
+    <block wx:for="{{product_one}}">
+      <view class="box" bindtap="productTap" data-productId="{{item.id}}" data-barTitle="{{item.title}}">
+        <view class="title">{{item.title}}</view>
+        <view class="content">
+          {{item.centent}}
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

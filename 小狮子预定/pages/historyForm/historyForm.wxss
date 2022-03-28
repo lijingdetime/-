@@ -1,0 +1,36 @@
+/* pages/historyForm/historyForm.wxss */
+
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 100rpx 10rpx 20rpx;
+  border: 1rpx solid #dbdbdb;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.historyHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.dateTime {
+  font-size: 28rpx;
+  color: burlywood;
+  font-family: Courier New, Courier, monospace;
+}
+
+.orderName {
+  font-size: 33rpx;
+  color: #333;
+}
+
+.productName {
+  font-size: 28rpx;
+  color: burlywood;
+}
+
+/* .Ccontainer{
+  padding-bottom: 500rpx;
+}  */
